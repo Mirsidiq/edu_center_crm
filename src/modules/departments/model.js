@@ -36,12 +36,12 @@ DepartsModel.hasMany(DirectionsModel,{
 DepartsModel.hasMany(PositionsModel,{
   foreignKey:"dep_ref_id"
 })
-PositionsModel.belongsTo(DepartsModel,{
-  foreignKey:"dep_ref_id"
-})
-DirectionsModel.belongsTo(DepartsModel,{
-  foreignKey:"dep_ref_id"
-})
+// PositionsModel.belongsTo(DepartsModel,{
+//   foreignKey:"dep_ref_id"
+// })
+// DirectionsModel.belongsTo(DepartsModel,{
+//   foreignKey:"dep_ref_id"
+// })
 export{
   DepartsModel
 }

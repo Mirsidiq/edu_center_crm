@@ -29,9 +29,9 @@ const CenterModel=sequelize.define("centers",{
   timestamps:false,
   freezeTableName:true,
 })
-CenterModel.hasMany(DepartsModel,{
-  foreignKey:"center_ref_id"
-})
+// CenterModel.hasMany(DepartsModel,{
+//   foreignKey:"center_ref_id"
+// })
 export{
   CenterModel
 }

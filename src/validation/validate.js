@@ -41,7 +41,7 @@ const checkUsersBody = Joi.object({
   email: Joi.string().max(60).required(),
   come_date: Joi.string().allow(null),
   left_date: Joi.string().allow(null),
-  group_ref_id: Joi.number().integer().required(),
+  group_ref_id: Joi.number().integer().allow(null),
   role: Joi.string().allow(null),
   gender: Joi.string().required().max(12),
 });

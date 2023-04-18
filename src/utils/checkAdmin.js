@@ -3,7 +3,7 @@ import { PositionsModel } from "../modules/positions/model.js";
 const checkAdmin = (user) => (user.role == "admin" ? true : false);
 const checkAccounter = async (user) => {
   const accounter = await PositionsModel.findByPk(user.pos_ref_id);
-  if (accounter.pos_name == "hisobchi") {
+  if (accounter.pos_name == "bugalter") {
     return { status: true, pos_id: accounter.pos_id };
   }
   return false;

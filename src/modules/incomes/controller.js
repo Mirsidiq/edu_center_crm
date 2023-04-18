@@ -58,7 +58,11 @@ const addIncome = async (req, res, next) => {
               data: {},
             });
       }
-    } else {
+      else{
+        next(new customError(400,'you have no permit'))
+      }
+    } 
+    else {
       next(new customError(400, "you have no permit"));
     }
   } catch (error) {

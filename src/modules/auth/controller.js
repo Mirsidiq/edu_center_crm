@@ -5,12 +5,14 @@ import { checkAdmin } from "../../utils/checkAdmin.js";
 import { customError } from "../../exception/customError.js";
 const login = async (req, res, next) => {
   const { email, contact } = req.body;
+  console.log(email,contact);
   const findUser = await UsersModel.findOne({
     where: {
       email,
       contact,
     },
   });
+  console.log(JSON.stringify(findUser,null,2));
   if (findUser) {
     if (checkAdmin(findUser)) {
       const generateNumber = Math.floor(Math.random() * 1000000000);

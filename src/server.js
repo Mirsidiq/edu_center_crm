@@ -6,6 +6,7 @@ import { startSequelize } from "./utils/sequelize.js";
 import allModels from "./modules/allModels.js";
 import allRoutes from "./modules/index.js";
 const app = express();
+
 app.use(express.json());
 startSequelize(allModels);
 app.use(allRoutes);
